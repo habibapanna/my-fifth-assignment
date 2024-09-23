@@ -36,7 +36,10 @@
   <header class="sticky bg-stone-50 backdrop-blur top-0">
     <div class="navbar bg-gray-100">
         <div class="navbar-start">
-          <a class="btn font-bold bg-lime-300 px-5">Blog</a>
+          <a id="blog-btn" class="btn font-bold bg-lime-300 px-5">Blog</a>
+        </div>
+        <div class="navbar-start">
+          <a id="home-btn" style="display: none;" class="btn font-bold bg-lime-300 px-5">Home</a>
         </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
@@ -71,6 +74,36 @@
       <div class="p-10">
         <h3 class="font-bold">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h3>
       <p class="mt-5">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+      </div>
+    </div>
+  </section>
+  <section id="blog-section" class="mt-5 p-12" style="display: none;">
+    <div class="collapse  collapse-arrow border shadow mt-5">
+      <input type="radio" name="my-accordion-2" checked="checked" />
+      <div class="collapse-title font-medium">What is the Document Object Model (DOM)?</div>
+      <div class="collapse-content">
+        <p class="text-sm">The DOM is a programming interface for web documents. It represents the page structure as a tree where each node is an object representing part of the document (like elements or text).</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow border shadow mt-5">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title font-medium">How do you select an element from the DOM?</div>
+      <div class="collapse-content">
+        <p class="text-sm">I can select elements using methods like `document.getElementsById`, `document.querySelector`, or `document.getElementByClassName`.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow border shadow mt-5">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+      <div class="collapse-content">
+        <p class="text-sm">Event delegation allow you to handle events at a higher level (like a parent element), improving effeciency, especially, when dynamically adding elements.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow border shadow mt-5">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+      <div class="collapse-content">
+        <p class="text-sm">You can manipulate attributes using methods like`setAttribute`, and styles using `element.style` to directly change CSS properties.</p>
       </div>
     </div>
   </section>

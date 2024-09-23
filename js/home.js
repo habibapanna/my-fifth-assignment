@@ -27,15 +27,26 @@ function toggleActive(button){
 donationBtn.addEventListener('click', () => toggleActive(historyBtn));
 historyBtn.addEventListener('click', () => toggleActive(historyBtn));
 
+// blog
 
-const donateNowBtns = document.querySelectorAll('.donate-now-btn');
-let accountBalance = 500;
+const blogSection = document.getElementById('blog-section');
 
-donateNowBtns.forEach(button => {
-    button.addEventListener('click', (e) => {
-        const cardNumber = e.target.getAttribute('data-card');
-        const inputField = document.getElementById(`donation-input-${cardNumber}`);
-        const donationAmount = parseFloat(inputField.value);
-        const donationElement = e.target.parentElement.querySelector('.donation-amount');
-    })
-})
+document.getElementById('blog-btn').addEventListener('click', function(){
+    blogSection.style.display = 'block';
+    console.log(blogSection);
+});
+
+
+
+
+// const donateNowBtns = document.querySelectorAll('.donate-now-btn');
+// let accountBalance = 500;
+
+// donateNowBtns.forEach(button => {
+//     button.addEventListener('click', (e) => {
+//         const cardNumber = e.target.getAttribute('data-card');
+//         const inputField = document.getElementById(`donation-input-${cardNumber}`);
+//         const donationAmount = parseFloat(inputField.value);
+//         const donationElement = e.target.parentElement.querySelector('.donation-amount');
+//     })
+// })
