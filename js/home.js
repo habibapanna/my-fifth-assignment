@@ -63,87 +63,100 @@ document.getElementById('donate-now-btn')
 
     if(donateAmount >= 0){
        const balance = document.getElementById('donation-amount').innerText;
+       const currentBalance = document.getElementById('account-balance').innerText; 
        const balanceNumber = parseFloat(balance);
+       const currentNumber = parseFloat(currentBalance);
 
        const newBalance = balanceNumber + donateMoney;
+       const newNumber = currentNumber - newBalance;
 
        document.getElementById('donation-amount').innerText = newBalance;
+       document.getElementById('account-balance').innerText = newNumber;
     
     }
     else{
         alert('Insufficient balance');
-            
     }
     
 });
 
 
-// donation amount 2
+// // donation amount 2
 
-document.getElementById('donate-now-btn-2')
-.addEventListener('click', function(event){
-    event.preventDefault();
+// document.getElementById('donate-now-btn-2')
+// .addEventListener('click', function(event){
+//     event.preventDefault();
 
 
-    const donateAmounts = document.getElementById('donation-input-2').value;
-    const donatesMoney = parseFloat(donateAmounts);
-    console.log(donateAmounts);
+//     const donateAmounts = document.getElementById('donation-input-2').value;
+//     const donatesMoney = parseFloat(donateAmounts);
+//     console.log(donateAmounts);
 
-    if(donateAmounts >= 0){
-       const balances = document.getElementById('donation-amount-2').innerText;
-       const balanceNumbers = parseFloat(balances);
+//     if(donateAmounts >= 0){
+//        const balances = document.getElementById('donation-amount-2').innerText;
+//        const currentBalances = document.getElementById('account-balance').innerText; 
+//        const balanceNumbers = parseFloat(balances);
+//        const currentNumbers = parseFloat(currentBalances);
 
-       const newBalances = balanceNumbers + donatesMoney;
+//        const newBalances = balanceNumbers + donatesMoney;
+//        const newNumbers = currentNumbers - newBalances;
 
-       document.getElementById('donation-amount-2').innerText = newBalances;
+//        document.getElementById('donation-amount-2').innerText = newBalances;
+//        document.getElementById('account-balance').innerText = newNumbers;
     
-    }
-    else{
-        alert('Insufficient balance');
+//     }
+//     else{
+//         alert('Insufficient balance');
             
-    }
+//     }
     
-});
+// });
 
 
-// donation amount 3
+// // donation amount 3
 
-document.getElementById('donate-now-btn')
-.addEventListener('click', function(event){
-    event.preventDefault();
+// document.getElementById('donate-now-btn')
+// .addEventListener('click', function(event){
+//     event.preventDefault();
 
 
-    const donatesAmount = document.getElementById('donation-input-3').value;
-    const donateMonies = parseFloat(donatesAmount);
-    console.log(donatesAmount);
+//     const donatedAmount = document.getElementById('donation-input-3').value;
+//     const donateMonies = parseFloat(donatedAmount);
+//     console.log(donatedAmount);
 
-    if(donatesAmount >= 0){
-       const balanced = document.getElementById('donation-amount-3').innerText;
-       const balancedNumber = parseFloat(balanced);
+//     if(donatedAmount >= 0){
+//        const balanced = document.getElementById('donation-amount-3').innerText;
+//        const balancedNumber = parseFloat(balanced);
+//        const currentBalance = document.getElementById('account-balance').innerText; 
+//        const currentNumber = parseFloat(currentBalance);
+       
+//        const newBalanced = balancedNumber + donateMonies;
+//        const newNumber = currentNumber - newBalanced;
 
-       const newBalanced = balancedNumber + donateMonies;
+//        document.getElementById('donation-amount-3').innerText = newBalanced;
+//        document.getElementById('account-balance').innerText = newNumber;
 
-       document.getElementById('donation-amount-3').innerText = newBalanced;
-    
-    }
-    else{
-        alert('Insufficient balance');
+//     }
+//     else{
+//         alert('Insufficient balance');
             
-    }
-    // if(donateAmount > accountBalance){
-    //     alert('Insufficient balance');
-    //     return;
-    // }
-});
+//     }
+    
+// });
 
-// const donateNowBtns = document.querySelectorAll('.donate-now-btn');
-// let accountBalance = 500;
 
-// donateNowBtns.forEach(button => {
-//     button.addEventListener('click', (e) => {
-//         const cardNumber = e.target.getAttribute('data-card');
-//         const inputField = document.getElementById(`donation-input-${cardNumber}`);
-//         const donationAmount = parseFloat(inputField.value);
-//         const donationElement = e.target.parentElement.querySelector('.donation-amount');
-//     })
-// })
+// transaction
+
+function addTransactionToHistory(amount, cardName){
+    const historySection = document.getElementById('history-section');
+    const transactionTime = new Date().toLocaleString();
+    const newHistoryEntry = DocumentTimeline.createElement('div');
+    newHistoryEntry.innerHTML = `
+    <p>Donation of $${amount} to ${cardName} on ${transactionTime}<p>`;
+    historySection.appendChild(newHistoryEntry);
+}
+
+
+
+
+
