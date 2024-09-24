@@ -38,8 +38,8 @@
         <div class="navbar-start">
           <a id="blog-btn" class="btn font-bold bg-lime-300 px-5">Blog</a>
         </div>
-        <div class="navbar-start">
-          <a id="home-btn" style="display: none;" class="btn font-bold bg-lime-300 px-5">Home</a>
+        <div class="navbar">
+          <a id="home-btn" style="display: none;" class="btn font-bold bg-lime-300 py-4 px-5">Home</a>
         </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
@@ -49,7 +49,7 @@
       </div>
       <div class="navbar-end">
         <img src="assets/coin.png" alt="">
-        <a class="text-gray-500 ml-2 font-bold">5500 BDT</a>
+        <a id="account-balance" class="text-gray-500 ml-2 font-bold">5500 BDT</a>
       </div>
     </div>
     <div class="mt-12 text-center">
@@ -57,6 +57,7 @@
       <button id="history-btn" class="btn bg-white ml-5 text-gray-500 px-7">History</button>
     </div>
   </header>
+  <!-- timing section -->
   <section class="mt-5 p-12" id="history-section" style="display: none;">
     <div class="border drop-shadow mt-5 rounded-lg">
       <div class="p-10">
@@ -77,6 +78,7 @@
       </div>
     </div>
   </section>
+  <!-- blog section -->
   <section id="blog-section" class="mt-5 p-12" style="display: none;">
     <div class="collapse  collapse-arrow border shadow mt-5">
       <input type="radio" name="my-accordion-2" checked="checked" />
@@ -108,59 +110,63 @@
     </div>
   </section>
   <main id="donation-section" class="px-12">
+    <!-- card section -->
+     <!-- card 1 -->
 <section class="mt-8 border drop-shadow rounded-lg">
-  <div class="grid grid-cols-1 gap-10 md:flex p-12"> 
+  <div class="grid grid-cols-1 size-full gap-10 lg:flex p-12"> 
     <!-- image -->
     <div class="">
       <img class="" src="assets/noakhali.png" alt="">
     </div>
     <!-- details -->
-    <div class="md:w-1/2">
-      <button class="btn"><img src="assets/coin.png" alt="">0 BDT</button>
-      <h3 class="font-bold mt-10">Donate for Flood at Noakhali, Bangladesh</h3>
-      <p class="text-gray-500 text-xs leading-normal tracking-normal mt-5"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. The people of Noakhali are now suffering badly for flood. So they need support and help from us. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+    <div class="lg:size-6/12">
+      <button id="donation-amount" class="btn"><img src="assets/coin.png" alt="">0 BDT</button>
+      <h3 class="font-bold mt-5">Donate for Flood at Noakhali, Bangladesh</h3>
+      <p class="text-gray-500 text-xs leading-normal tracking-normal mt-3"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. The people of Noakhali are now suffering badly for flood. So they need support and help from us. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
       <div class="card">
-        <input id="donation-input-1" class="w-full text-center border text-xs mt-10 py-5 rounded-lg" type="number" placeholder="Write Donation Amount">
+        <input id="donation-input-1" class="w-full text-center border text-xs mt-5 py-5 rounded-lg" type="number" placeholder="Write Donation Amount">
       <br>
-      <button class="w-full py-5 rounded-lg mt-5 bg-lime-300 font-bold" data-card="1">Donate Now</button>
+      <button id="donate-now-btn" class="w-full py-5 rounded-lg mt-5 bg-lime-300 font-bold" data-card="1">Donate Now</button>
       </div>
     </div>
   </div>
 </section>
+<!-- card 2 -->
 <section class="mt-8 border drop-shadow rounded-lg">
-  <div class="grid grid-cols-1 gap-10 md:flex p-12"> 
+  <div class="grid grid-cols-1 gap-10 lg:flex p-12"> 
     <!-- image -->
     <div class="">
       <img class="" src="assets/feni.png" alt="">
     </div>
     <!-- details -->
-    <div class="md:w-1/2">
-      <button class="btn"><img src="assets/coin.png" alt="">0 BDT</button>
+    <div class="lg:size-6/12">
+      <button id="donation-amount-2" class="btn"><img src="assets/coin.png" alt="">0 BDT</button>
       <h3 class="font-bold mt-10">Donate for Flood at Noakhali, Bangladesh</h3>
       <p class="text-gray-500 text-xs leading-normal tracking-normal mt-5"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
       <div class="card">
-        <input class="w-full border text-center text-xs mt-10 py-5 rounded-lg" type="text" placeholder="Write Donation Amount">
+        <input id="donation-input-2" class="w-full border text-center text-xs mt-10 py-5 rounded-lg" type="text" placeholder="Write Donation Amount">
       <br>
-      <button class="w-full py-5 rounded-lg mt-5 bg-lime-300 font-bold">Donate Now</button>
+      <button id="donate-now-btn-2" class="w-full py-5 rounded-lg mt-5 bg-lime-300 font-bold">Donate Now</button>
       </div>
     </div>
   </div>
 </section>
+<!-- card 3 -->
 <section class="mt-8 border drop-shadow rounded-lg">
-  <div class="grid grid-cols-1 gap-10 md:flex p-12"> 
+  <div class="grid grid-cols-1 gap-10 lg:flex p-12"> 
     <!-- image -->
     <div class="">
       <img class="" src="assets/quota-protest.png" alt="">
     </div>
     <!-- details -->
-    <div class="md:w-1/2">
-      <button class="btn"><img src="assets/coin.png" alt="">0 BDT</button>
+    <div class="lg:size-6/12">
+      <button id="donation-amount-3" class="btn"><img src="assets/coin.png" alt="">0 BDT</button>
       <h3 class="font-bold mt-10">Donate for Flood at Noakhali, Bangladesh</h3>
       <p class="text-gray-500 text-xs leading-normal tracking-normal mt-5">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
       <div class="card">
-        <input class="w-full border text-center text-xs mt-10 py-5 rounded-lg" type="text" placeholder="Write Donation Amount">
+        <input id="donation-input-3" class="w-full border text-center text-xs mt-10 py-5 rounded-lg" type="text" placeholder="Write Donation Amount">
       <br>
-      <button class="w-full py-5 rounded-lg mt-5 bg-lime-300 font-bold">Donate Now</button>
+      <button id="donate-now-btn-3" class="w-full py-5 rounded-lg mt-5 bg-lime-300 font-bold">Donate Now</button>
       </div>
     </div>
   </div>
