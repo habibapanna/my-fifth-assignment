@@ -22,7 +22,7 @@ function toggleActive(button){
     button.classList.toggle('active');
     donationBtn.style.backgroundColor = 'white'
     historyBtn.style.backgroundColor = '#B4F461'
-    console.log(historyBtn, donationBtn)
+    console.log(historyBtn)
 }
 
 historyBtn.addEventListener('click', () => toggleActive(historyBtn));
@@ -78,7 +78,25 @@ document.getElementById('donate-now-btn')
         alert('Insufficient balance');
     }
     
+
+
+
+const historyItem = document.createElement('div');
+historyItem.className = 
+"bg-white p-3 rounded-lg border shadow";
+
+historyItem.innerHTML = `
+<p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+<p class="text-xl font-bold">Donate for Flood at Noakhali: $${donateAmount}</p>
+`;
+
+const historyList = document.getElementById('history-section');
+
+historyList.insertBefore(historyItem, historyList.firstChild);
+
+
 });
+
 
 
 // // donation amount 2
@@ -147,14 +165,29 @@ document.getElementById('donate-now-btn')
 
 // transaction
 
-function addTransactionToHistory(amount, cardName){
-    const historySection = document.getElementById('history-section');
-    const transactionTime = new Date().toLocaleString();
-    const newHistoryEntry = DocumentTimeline.createElement('div');
-    newHistoryEntry.innerHTML = `
-    <p>Donation of $${amount} to ${cardName} on ${transactionTime}<p>`;
-    historySection.appendChild(newHistoryEntry);
-}
+
+
+// function addTransactionToHistory(amount, cardName){
+//     const historySection = document.getElementById('history-section');
+//     const transactionTime = new Date().toLocaleString();
+//     const newHistoryEntry = DocumentTimeline.createElement('div');
+//     newHistoryEntry.innerHTML = `
+//     <p>Donation of $${amount} to ${cardName} on ${transactionTime}<p>`;
+//     historySection.appendChild(newHistoryEntry);
+// }
+
+
+
+// const historyItem = document.createElement('div');
+// historyItem.className = 
+// "bg-white p-3 rounded-lg border-1-2 border-indigo-500";
+
+// historyItem.innerHTML = `
+// <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+// <p class="text-xs text-gray-500">Donate: $${donateAmount.toFixed(4)}</p>
+// `;
+
+
 
 
 
